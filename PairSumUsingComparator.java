@@ -17,6 +17,7 @@ public class Solution{
             }
             }
         }
+        //comparator is used in this
          anslist.sort(new Comparator<int[]>() {
             public int compare(int[] a, int[] b) {
                 return Integer.compare(a[0], b[0]);
