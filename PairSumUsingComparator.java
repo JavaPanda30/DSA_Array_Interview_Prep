@@ -27,3 +27,33 @@ public class Solution{
         return anslist;
     }
 }
+
+/*
+ * In this optimized code:
+
+We use a HashMap numCount to store the frequency of numbers encountered in the array.
+We iterate through the array once. For each number, we calculate its complement (s - num) and check if it exists in the numCount map. If it does and its frequency is greater than 0, we add the pair to anslist.
+After checking for a valid pair, we decrease the frequency of the complement in the map.
+Finally, we increase the frequency of the current number in the map.
+This optimized solution reduces the time complexity to O(n) by avoiding the nested loops and using a hashmap for efficient lookup of complements.
+
+public class Solution {
+    public static List<int[]> pairSum(int[] arr, int s) {
+        List<int[]> anslist = new ArrayList<>();
+        Map<Integer, Integer> numCount = new HashMap<>();
+
+        for (int num : arr) {
+            int complement = s - num;
+
+            if (numCount.containsKey(complement) && numCount.get(complement) > 0) {
+                int ans[] = { Math.min(num, complement), Math.max(num, complement) };
+                anslist.add(ans);
+                numCount.put(complement, numCount.get(complement) - 1);
+            }
+
+            numCount.put(num, numCount.getOrDefault(num, 0) + 1);
+        }
+
+        return anslist;
+    }
+ */
