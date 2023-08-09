@@ -22,4 +22,4 @@ public int compare(int[] a, int[] b) { ... }: This is the overridden compare met
 
 return Integer.compare(a[0], b[0]);: Inside the compare method, you are comparing the first element (a[0]) of the two input arrays (a and b). The Integer.compare method is used to compare two integers and returns a negative value if the first integer is smaller, a positive value if the first integer is greater, and zero if they are equal.
 
-By using this custom comparator, the anslist.sort(...) method will sort the pairs of integers in the anslist list based on the values of their first elements. This way, the pairs will be sorted in ascending order of their first elements.
+By using this custom comparator, the anslist.sort(...) method will (be) sort the pairs of integers in the anslist list based on the values of their first elements. This way, the pairs will be sorted in ascending order of their first elements.
