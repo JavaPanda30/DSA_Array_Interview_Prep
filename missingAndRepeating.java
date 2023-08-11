@@ -35,3 +35,19 @@ public class Solution {
         return ans;
     }
 }
+
+//Using math
+// for(int i=1;i<=arr.size();i++)
+//         {
+//             if(!arr.contains(i))
+//             {
+//                 ans[0]=i;
+//                 sum-=i;
+//             }
+//         }
+//         for(int i: arr)
+//         {
+//             sum-=i;
+//         }
+//         ans[1]=Math.abs(sum);
+//         return ans;
