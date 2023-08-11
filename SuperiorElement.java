@@ -11,14 +11,14 @@ public class Solution {
     public static List< Integer > superiorElements(int []a) {
         // Write your code here.
         List< Integer > ans = new ArrayList<>();
-        int min=a[a.length-1];
+        int max=a[a.length-1];
         ans.add(a[a.length-1]);
         for(int i=a.length-2;i>=0;i--)
         {
-            if(a[i]>min)
+            if(a[i]>max)
             {
-                min=a[i];
-                ans.add(min);
+                max=a[i];
+                ans.add(max);
             }
         }
         Collections.sort(ans);
