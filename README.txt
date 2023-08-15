@@ -1,1 +1,1 @@
-Here i will commit and save all codes i done on DSA.
+Here i will commit and save all codes i do for learning DSA.
