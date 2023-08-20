@@ -1,0 +1,25 @@
+Certainly! The Comparator interface in Java is used to define custom comparison logic for sorting objects. It provides a way to compare two objects and determine their order based on certain criteria.
+
+In your code, you are using an anonymous inner class to create an instance of Comparator<int[]> and overriding the compare method to define the sorting behavior. Let's break down the code snippet:
+
+java
+Copy code
+anslist.sort(new Comparator<int[]>() {
+    @Override
+    public int compare(int[] a, int[] b) {
+        return Integer.compare(a[0], b[0]);
+    }
+});
+Here's what each part of the code snippet does:
+
+anslist.sort(...): This is calling the sort method on the anslist list. It sorts the list according to the order defined by the provided comparator.
+
+new Comparator<int[]>() { ... }: This is creating an instance of an anonymous inner class that implements the Comparator interface for int[] arrays. Inside the curly braces { ... }, you are defining the behavior of the compare method.
+
+@Override: This annotation indicates that you are overriding a method from the superclass or interface. In this case, you are overriding the compare method from the Comparator interface.
+
+public int compare(int[] a, int[] b) { ... }: This is the overridden compare method. It takes two int[] arrays as input parameters and returns an integer value based on their comparison.
+
+return Integer.compare(a[0], b[0]);: Inside the compare method, you are comparing the first element (a[0]) of the two input arrays (a and b). The Integer.compare method is used to compare two integers and returns a negative value if the first integer is smaller, a positive value if the first integer is greater, and zero if they are equal.
+
+By using this custom comparator, the anslist.sort(...) method will (be) sort the pairs of integers in the anslist list based on the values of their first elements. This way, the pairs will be sorted in ascending order of their first elements.
